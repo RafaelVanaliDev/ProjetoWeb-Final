@@ -1,0 +1,91 @@
+.imagem-fixa
+{
+	position: fixed;
+	top: 55%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+
+	width: 550px;
+	height: auto; 
+}
+
+/* Limpa qualquer elemento flutuante  */
+.sem-float
+{
+	clear: both;
+}
+
+.container
+{
+	display: grid;
+	place-items: center;
+}
+
+@media screen and (max-width: 1024px)
+{
+	.imagem-fixa
+	{
+		display: none; /* Oculta a imagem da Ruby*/
+	}
+
+	/* Remove o deslocamento da coluna do Bootstrap em telas menores */
+	.col-md-6.offset-md-5
+	{
+		margin-left: 0;
+	}
+}
+
+.Linha-1x
+{
+	border: 1px solid rgba(247, 243, 166, 0.7);
+	border-bottom: 1px solid rgba(224, 225, 142, 0.7);
+	border-color: rgba(211, 219, 134, 0.4);
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+
+/* Para adicionaar um espaço abaixo de uma imagem */
+.espaco
+{
+	height: 20px;
+}
+
+.texto
+{
+	font-size: 18px;
+	text-align: center; 
+	color:#F3E6D0;
+}
+
+.Titulo
+{
+	line-height: 107%;
+	font-family: "Century Schoolbook", serif;
+	background: linear-gradient(to bottom, #eabe73 15%, #a7a27e 75%, #f8f8f8 100%);
+
+	color: transparent;
+	padding-bottom: 12px;
+	display: block;
+	width: max-content;
+	
+	margin: 0 auto;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.Titulo-2
+{
+	line-height: 107%;
+	font-family: "Century Schoolbook", serif;
+	background: linear-gradient(to bottom, #eabe73 15%, #a7a27e 75%, #f8f8f8 100%);
+
+	color: transparent;
+	padding-bottom: 12px;
+	display: block;
+	width: max-content;
+
+	-webkit-background-clip: text;
+	background-clip: text;
+}

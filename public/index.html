@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset = "UTF-8">
+	<!-- Responsivo -->
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+	<title>Página Inicial</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel = "stylesheet"
+		integrity = "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin = "anonymous">
+
+	<!--Meus CSS-->
+	<link rel = "stylesheet" href = "./css/02_background.css">
+	<link rel = "stylesheet" href = "./css/01_estilo_menu_principal.css">
+
+</head>
+
+<body>
+	<section id = "estilo_menu_principal">
+		<!-- Barra de Navegação -->
+		<nav class = "navbar navbar-expand-lg navbar-light bg-light">
+			<div class = "container-fluid">
+				<img class = "navbar-brand" src="imagens/010_logo.png" alt = "Logo">
+				<button 
+					class = "navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target = "#navbarNav" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation">
+					<span class = "navbar-toggler-icon"></span>
+				</button>
+				<div class = "collapse navbar-collapse" id = "navbarNav">
+					<ul class = "navbar-nav border border-dark">
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "index.html">Inicio</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "pages/Sobre.html">O Jogo</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Personagens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Itens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "pages/consultar.html">Conta</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#" id="entrarLink">Entrar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class = "jan_login">
+		<!-- ENTRAR ( Login(login nao funciona) CLICAR EM CRIAR CONTA!!!!!! e ou Cadastrar )-->
+		<div class = "modal fade" id = "loginModal" tabindex = "-1" aria-labelledby = "exampleModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<h5 class = "modal-title" id = "exampleModalLabel"><img src = "./imagens/010_logo.png" alt = "Logo" class = "ajuste-imagem"></h5>
+						<button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
+					</div>
+					<div class = "modal-body">
+						<div class = "mb-3">
+							<label for = "username" class = "form-label">Nome do Usuário</label>
+							<input type = "text" class = "form-control" id = "username">
+						</div>
+						<div class = "mb-3">
+							<label for = "password" class = "form-label">Senha</label>
+							<input type = "password" class = "form-control" id = "password">
+						</div>
+						<p><a href = "#">Esqueceu a senha?</a></p>
+						<p><a href = "Criar_Conta.html">Criar conta</a></p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-secondary" data-bs-dismiss = "modal">Fechar</button>
+						<button type = "button" class = "btn btn-primary">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<section>	<!-- Carrossel -->
+			<div id = "meuCarrossel" class = "carousel slide" data-bs-ride = "carousel">
+				<div class = "carousel-indicators">
+					<button
+						type = "button" data-bs-target = "#meuCarrossel" data-bs-slide-to = "0" class = "active" aria-current = "true" aria-label = "Slide 1">
+					</button>
+					<button type = "button" data-bs-target = "#meuCarrossel" data-bs-slide-to = "1" aria-label = "Slide 2"></button>
+					<button type = "button" data-bs-target = "#meuCarrossel" data-bs-slide-to = "2" aria-label = "Slide 3"></button>
+					<button type = "button" data-bs-target = "#meuCarrossel" data-bs-slide-to = "3" aria-label = "Slide 4"></button>
+					<button type = "button" data-bs-target = "#meuCarrossel" data-bs-slide-to = "4" aria-label = "Slide 5"></button>
+				</div>
+
+				<div class = "carousel-inner">
+					<div class = "carousel-item active">
+						<img src = "./imagens/011_c.png" class = "d-block w-100" alt = "Slide 1">
+					</div>
+					<div class = "carousel-item">
+						<img src = "./imagens/012_c.jpg" class = "d-block w-100" alt = "Slide 2">
+					</div>
+					<div class = "carousel-item">
+						<img src = "./imagens/013_c.jpg" class = "d-block w-100" alt = "Slide 3">
+					</div>
+					<div class = "carousel-item">
+						<img src = "./imagens/014_c.jpg" class = "d-block w-100" alt = "Slide 4">
+					</div>
+					<div class = "carousel-item">
+						<img src="./imagens/015_c.png" class = "d-block w-100" alt = "Slide 5">
+					</div>
+				</div>
+
+				<button class = "carousel-control-prev" type = "button" data-bs-target = "#meuCarrossel" data-bs-slide = "prev">
+					<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+					<span class = "visually-hidden">Previous</span>
+				</button>
+				<button class = "carousel-control-next" type = "button" data-bs-target = "#meuCarrossel" data-bs-slide = "next">
+					<span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+					<span class = "visually-hidden">Next</span>
+				</button>
+			</div>
+		</section>
+
+		<article>
+			<h2 class = "titulo-2"><strong>Últimas Notícias</strong></h2>
+
+			<section class = "imagem-ultimas">
+				<img src = "./imagens/016_Ult.png" alt = "Ultimas Noticias 02/03/2024" class = "img-fluid">
+				<div class = "texto-ultimas">
+					<h3><strong>Prévia da Versão 4.5 de Genshin Impact</strong></h3>
+					<p class = "texto-p-ult">
+						A indústria da alquimia de Mondstadt está prosperando, impulsionada por uma demanda crescente por todos os tipos de poções para superar os desafios e atribulações do dia a dia.
+					</p>
+					<a href = "#" class = "saiba-mais">Saiba mais...</a>
+				</div>
+			</section>
+
+			<div class = "espaco-ult"></div>
+
+			<section class = "imagem-ultimas">
+				<img src = "./imagens/017_Ult.png" alt = "Ultimas Noticias 01/03/2024" class = "img-fluid">
+				<div class = "texto-ultimas">
+					<h3><strong>Prévia do Programa Especial da Versão 4.5</strong></h3>
+					<p class = "texto-p-ult">
+						Olá, Viajantes! Chegou a hora da prévia!
+					</p>
+					<a href = "#" class = "saiba-mais">Saiba mais...</a>
+				</div>
+			</section>
+
+			<div class = "espaco-ult"></div>
+
+			<section class = "imagem-ultimas">
+				<img src = "./imagens/018_Ult.jpg" alt = "Ultimas Noticias 28/02/2024" class = "img-fluid">
+				<div class = "texto-ultimas">
+					<h3><strong>Descrição do Modo de Jogo de "Aves Vibrantes Voando na Brisa Primaveril"</strong></h3>
+					<p class = "texto-p-ult">
+						Olá, Viajantes, o Evento "Aves Vibrantes Voando na Brisa Primaveril" está prestes a começar! No anual Ritual de Lanternas, quais histórias e atividades interessantes nos esperam?
+					</p>
+					<a href = "#" class = "saiba-mais">Saiba mais...</a>
+				</div>
+			</section>
+
+			<div class = "espaco-ult"></div>
+
+			<section class = "imagem-ultimas">
+				<img src = "./imagens/019_Ult.jpg" alt = "Ultimas Noticias 26/02/2024" class = "img-fluid">
+				<div class = "texto-ultimas">
+					<h3><strong>Demo de Novo Personagem - "Xianyun: Brisa Despreocupada" | Genshin Impact</strong></h3>
+					<p class = "texto-p-ult">
+						Apesar da Retentora de Nuvem sempre falar sobre seus discípulos e amigos, e ter interesse em várias coisas novas no mundo humano, ela frequentemente se considera um espírito livre.
+					</p>
+					<a href = "#" class = "saiba-mais">Saiba mais...</a>
+				</div>
+			</section>
+
+			<div class = "espaco-ult"></div>
+
+			<section class = "imagem-ultimas">
+				<img src = "./imagens/020_Ult.jpg" alt = "Ultimas Noticias 23/02/2024" class = "img-fluid">
+				<div class = "texto-ultimas">
+					<h3><strong>"Um traje para o banquete, Hum, vou escolher este!" — Novo vestuário da Ganyu, "Flor do Crespúsculo</strong></h3>
+					<p class = "texto-p-ult">
+						O novo vestuário da Ganyu, ""Flor do Crepúsculo"" estará disponível após a atualização da Versão 4.4.
+					</p>
+					<a href = "#" class = "saiba-mais">Saiba mais...</a>
+				</div>
+			</section>
+		</article>
+	</main>
+
+	<!-- Bootstrap 5.3 -->
+	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+		integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin = "anonymous">
+	</script>
+
+	<!-- Meus Scripts -->
+	<script src = "./scripts/login_Dados.js"></script>
+	<script src = "./scripts/rodape.js"></script>
+</body>
+</html>

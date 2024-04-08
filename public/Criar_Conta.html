@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset = "UTF-8">
+	<!-- Responsivo -->
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+	<title>Cadastrar Novo Usuário</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel = "stylesheet"
+		integrity = "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin = "anonymous">
+
+	<!--Meus CSS-->
+	<link rel = "stylesheet" href = "./css/01_estilo_menu_principal.css">
+	<link rel = "stylesheet" href = "./css/02_background.css">
+	<link rel = "stylesheet" href = "./css/03_cadastrar.css">
+</head>
+
+<body>
+	<section id = "estilo_menu_principal"> 
+		<!-- Barra de Navegação -->
+		<nav class = "navbar navbar-expand-lg navbar-light bg-light">
+			<div class = "container-fluid">
+				<img class = "navbar-brand" src="imagens/010_logo.png" alt = "Logo">
+				<button 
+					class = "navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target = "#navbarNav" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation">
+					<span class = "navbar-toggler-icon"></span>
+				</button>
+				<div class = "collapse navbar-collapse" id = "navbarNav">
+					<ul class = "navbar-nav border border-dark">
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "index.html">Inicio</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "pages/Sobre.html">O Jogo</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Personagens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Itens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "pages/consultar.html">Conta</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#" id="entrarLink">Entrar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class = "jan_login"> 
+		<!-- ENTRAR ( Login e ou Cadastrar )-->
+		<div class = "modal fade" id = "loginModal" tabindex = "-1" aria-labelledby = "exampleModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<h5 class = "modal-title" id = "exampleModalLabel"><img src = "./imagens/010_logo.png" alt = "Logo" class = "ajuste-imagem"></h5>
+						<button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
+					</div>
+					<div class = "modal-body">
+						<div class = "mb-3">
+							<label for = "username" class = "form-label">Nome do Usuário</label>
+							<input type = "text" class = "form-control" id = "username">
+						</div>
+						<div class = "mb-3">
+							<label for = "password" class = "form-label">Senha</label>
+							<input type = "password" class = "form-control" id="password">
+						</div>
+						<p><a href = "#">Esqueceu a senha?</a></p>
+						<p><a href = "Criar_Conta.html">Criar conta</a></p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-secondary" data-bs-dismiss = "modal">Fechar</button>
+						<button type = "button" class = "btn btn-primary">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<section>
+			<h2><strong>Cadastrar novo usuário</strong></h2>
+
+			<div class = "container">
+				<h2>Dados Pessoais</h2>
+
+				<div class = "border border-secondary p-3">
+
+				<form onsubmit = "return validar_Formulario()">
+					<div class = "row">
+						<div class = "col">
+							<div class = "mb-3">		<!-- Primeiro Nome -->
+								<label for = "primeiroNome" class="form-label">Primeiro Nome</label>
+								<input type = "text" class = "form-control input-largura" id = "primeiroNome" placeholder = "Digite o primeiro nome">
+								<div id = "erroPrimeiroNome" class = "mensagem-erro" style = "display: none;">
+									Primeiro nome inválido. Por favor, insira um nome sem caracteres especiais ou espaços.
+								</div>
+								<div id = "sucessoPrimeiroNome" class = "mensagem-sucesso" style = "display: none;">
+									Primeiro nome válido.
+								</div>
+							</div>
+						</div>
+
+						<div class = "col">
+							<div class = "mb-3">		<!-- Sobrenome -->
+								<label for = "sobrenome" class = "form-label">Sobrenome</label>
+								<input type = "text" class="form-control input-largura" id = "sobrenome" placeholder = "Digite o sobrenome">
+								<div id = "erroSobrenome" class = "mensagem-erro" style = "display: none;">
+									Sobrenome inválido. Por favor, insira um sobrenome sem caracteres especiais ou espaços.
+								</div>
+								<div id = "sucessoSobrenome" class = "mensagem-sucesso" style = "display: none;">
+									Sobrenome válido.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class = "row">
+						<div class = "col">
+							<div class = "mb-3">		<!-- CPF -->
+								<label for = "cpf" class="form-label">CPF</label>
+								<input type = "text" class="form-control input-largura" id = "cpf" placeholder = "Digite o CPF">
+								<div id = "erroCPF" class="mensagem-erro" style = "display: none;">
+									CPF inválido. Por favor, insira um CPF válido.
+								</div>
+								<div id = "sucessoCPF" class = "mensagem-sucesso" style = "display: none;">
+									CPF válido.
+								</div>
+							</div>
+						</div>
+
+						<div class = "col">
+							<div class = "mb-3">		<!-- ESTADO -->
+								<label for = "estado" class = "form-label">Estado</label>
+								<select class = "form-select input-largura" id = "estado">
+									<option value = "">Selecione o estado</option>
+									<option value = "AC">Acre</option>
+									<option value = "AL">Alagoas</option>
+									<option value = "AP">Amapá</option>
+									<option value = "AM">Amazonas</option>
+									<option value = "BA">Bahia</option>
+									<option value = "CE">Ceará</option>
+									<option value = "DF">Distrito Federal</option>
+									<option value = "ES">Espírito Santo</option>
+									<option value = "GO">Goiás</option>
+									<option value = "MA">Maranhão</option>
+									<option value = "MT">Mato Grosso</option>
+									<option value = "MS">Mato Grosso do Sul</option>
+									<option value = "MG">Minas Gerais</option>
+									<option value = "PA">Pará</option>
+									<option value = "PB">Paraíba</option>
+									<option value = "PR">Paraná</option>
+									<option value = "PE">Pernambuco</option>
+									<option value = "PI">Piauí</option>
+									<option value = "RJ">Rio de Janeiro</option>
+									<option value = "RN">Rio Grande do Norte</option>
+									<option value = "RS">Rio Grande do Sul</option>
+									<option value = "RO">Rondônia</option>
+									<option value = "RR">Roraima</option>
+									<option value = "SC">Santa Catarina</option>
+									<option value = "SP">São Paulo</option>
+									<option value = "SE">Sergipe</option>
+									<option value = "TO">Tocantins</option>
+								</select>
+								<div id = "erroEstado" class = "mensagem-erro" style = "display: none;">
+									Por favor, selecione um estado.
+								</div>
+								<div id = "sucessoEstado" class = "mensagem-sucesso" style = "display: none;">
+									Estado selecionado.
+								</div>
+							</div>
+						</div>
+					</div>
+
+						<div class = "row">
+							<div class = "col">
+								<div class = "mb-3">		<!-- SEXO -->
+									<label for = "sexo" class = "form-label">Sexo</label>
+									<select class = "form-select input-largura" id="sexo">
+										<option value = "">Selecione o sexo</option>
+										<option value = "masculino">Masculino</option>
+										<option value = "feminino">Feminino</option>
+										<option value = "outro">Outro</option>
+									</select>
+									<div id = "erroSexo" class = "mensagem-erro" style = "display: none;">
+										Por favor, selecione um sexo.
+									</div>
+									<div id = "sucessoSexo" class = "mensagem-sucesso" style = "display: none;">
+										Sexo selecionado.
+									</div>
+								</div>
+							</div>
+
+							<div class = "col">
+								<div class = "mb-3">		<!-- Número Celulr -->
+									<label for = "celular" class = "form-label">Número do Celular</label>
+									<input type = "text" class = "form-control input-largura" id = "celular" placeholder = "Digite seu número de celular (xx) xxxxx-xxxx">
+									<div id = "erroCelular" class = "invalid-feedback">
+										Por favor, insira um número de celular válido.
+									</div>
+									<div id = "sucessoCelular" class = "valid-feedback">
+										Número de celular válido.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class = "espaco-ult"></div>
+
+					<div class = "border border-secondary p-3">
+						<h2>Dados da Conta</h2>
+
+						<div class = "row">
+							<div class = "col">
+								<div class = "mb-3">		<!-- Nome do Usuário -->
+									<label for = "nomeUsuario" class = "form-label">Nome do Usuário</label>
+									<input type = "text" class = "form-control input-largura" id = "nomeUsuario" placeholder = "Digite o nome do usuário">
+									<div id = "erroNomeUsuario" class = "mensagem-erro" style = "display: none;">
+										Nome de usuário inválido. Por favor, insira um nome de usuário sem caracteres especiais ou espaços.
+									</div>
+									<div id = "sucessoNomeUsuario" class = "mensagem-sucesso" style = "display: none;">
+										Nome de usuário válido.
+									</div>
+								</div>
+							</div>
+
+							<div class = "col">
+								<div class = "mb-3">		<!-- Email -->
+									<label for = "email" class="form-label">E-mail</label>
+									<input type = "email" class="form-control input-largura" id = "email" placeholder = "Insira seu e-mail" required>
+									<div id = "erroEmail" class="invalid-feedback" class = "mensagem-erro" style = "display: none;">
+										Por favor, insira um e-mail válido.</div>
+									<div id = "sucessoEmail" class="mensagem-sucesso" style = "display: none;">E-mail válido!</div>
+								</div>
+							</div>
+						</div>
+
+						<div class = "mb-3">		<!-- Senha -->
+							<label for = "senha" class = "form-label">Senha</label>
+							<input type = "password" class = "form-control input-largura" id = "senha" placeholder = "Insira sua senha" required>
+						</div>
+						<div class = "mb-3">		<!-- Senha -->
+							<label for = "confirmarSenha" class = "form-label">Confirmar Senha</label>
+							<input type = "password" class = "form-control input-largura" id = "confirmarSenha" placeholder="Confirme sua senha" required>
+							<div id = "erroSenha" class = "invalid-feedback">As senhas não coincidem.</div>
+							<div id = "sucessoSenha" class = "valid-feedback" style = "display: none;">As senhas coincidem.</div>
+						</div>
+					</div>
+
+					<div class = "espaco-ult"></div>
+					<button type = "button" id = "botaoCadastro" class = "btn btn-primary">Cadastrar</button>
+				</form>
+			</div>
+		</section>
+	<main>
+
+	<!-- Bootstrap 5.3 -->
+	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+		integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin = "anonymous"></script>
+
+	<!-- Meus Scripts -->
+	<script src = "./scripts/login_Dados.js"></script>
+	<script src = "./scripts/cadastrar.js"></script>
+	<script src = "./scripts/rodape.js"></script>
+</body>
+</html>

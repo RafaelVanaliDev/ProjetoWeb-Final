@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset = "UTF-8">
+	<!-- Responsivo -->
+	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Sobre o Jogo</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel = "stylesheet"
+		integrity = "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin = "anonymous">
+
+	<!--Meus CSS-->
+	<link rel = "stylesheet" href = "../css/02_background.css">
+	<link rel = "stylesheet" href = "../css/01_estilo_menu_principal.css">
+	<link rel = "stylesheet" href = "../css/04_estilo_sobre_jogos.css">
+
+</head>
+<body>
+	<section id = "estilo_menu_principal"> 
+		<!-- Barra de Navegação -->
+		<nav class = "navbar navbar-expand-lg navbar-light bg-light">
+			<div class = "container-fluid">
+				<img class = "navbar-brand" src="../imagens/010_logo.png" alt = "Logo">
+				<button 
+					class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarNav" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation">
+					<span class = "navbar-toggler-icon"></span>
+				</button>
+				<div class = "collapse navbar-collapse" id = "navbarNav">
+					<ul class = "navbar-nav border border-dark">
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "../index.html">Inicio</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "pages/Sobre.html">O Jogo</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Personagens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Itens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "consultar.html">Conta</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#" id="entrarLink">Entrar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class = "jan_login"> 
+		<!-- ENTRAR ( Login e ou Cadastrar )-->
+		<div class = "modal fade" id = "loginModal" tabindex = "-1" aria-labelledby = "exampleModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<h5 class = "modal-title" id = "exampleModalLabel"><img src = "./imagens/010_logo.png" alt = "Logo" class = "ajuste-imagem"></h5>
+						<button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
+					</div>
+					<div class = "modal-body">
+						<div class = "mb-3">
+							<label for = "username" class = "form-label">Nome do Usuário</label>
+							<input type = "text" class = "form-control" id = "username">
+						</div>
+						<div class = "mb-3">
+							<label for = "password" class = "form-label">Senha</label>
+							<input type = "password" class = "form-control" id = "password">
+						</div>
+						<p><a href = "#">Esqueceu a senha?</a></p>
+						<p><a href = "../Criar_Conta.html">Criar conta</a></p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-secondary" data-bs-dismiss = "modal">Fechar</button>
+						<button type = "button" class = "btn btn-primary">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<!-- Conteúdo da Página 'Sobre o Jogo' -->
+		<img src = "../imagens/003_Girl_Magic.gif" alt = "Ruby" class = "imagem-fixa">
+
+		<article class = "container">
+			<div class = "row">
+				<div class = "col-md-6 offset-md-5">
+					<h1 class = "Titulo"><strong>SOBRE O JOGO</strong></h1>
+
+					<section>
+						<h2 class = "Titulo"><strong>Teyvat</strong></h2>
+						<div class = "Linha-1x"></div>
+						<div class = "texto">
+							<p>
+								Este é o mundo de fantasia de Teyvat, onde dominam os Sete Elementos.
+								Há muito tempo, as pessoas, através de suas crenças nos Deuses, aprenderam a controlar o poder desses elementos, e transformaram este lugar inóspito em suas moradias.
+							</p>
+							<p>O colapso desse império, há 500 anos, abalou os céus e a terra.</p>
+							<p>Contudo, apesar da devastação ter acabado, a paz ainda não estava à vista.</p>
+						</div>
+						<div class = "Linha-1x"></div>
+					</section>
+
+					<section>
+						<h2 class = "Titulo"><strong>Mondstadt</strong></h2>
+						<div class = "Linha-1x"></div>
+
+						<section>
+							<h3 class = "Titulo-2"><strong>Lago de Cidra</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									Um lago de água doce natural que cerca Mondstadt. Sua ampla superfície e suas ondas cristalinas nunca mudaram durante milênios. A água é tão clara que você consegue ver o fundo e seu sabor é agradável ao paladar. A reputação do vinho de Mondstadt vem dessa fonte e fez do lago um símbolo da cidade.
+								</p>
+								<img src = "../imagens/004_Lago_de_Cidra.jpg" alt = "Lago de Cidra">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+
+						</section>
+						
+						<section>
+							<h3 class = "Titulo-2"><strong>Costa do Falcão</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									Estendendo-se ao leste do Quebrador de Ventos, a Costa do Falcão e o Promontório do Juramento formam os três lados da terra na baía ao leste de Mondstadt. Como a costa é larga e rasa, é um local popular para se visitar entre o povo de Mondstadt.
+								</p>
+								<p>
+									Frequentemente você pode ver os falcões sulcando o horizonte que divide o mar verde e a areia branca.
+								</p>
+								<img src = "../imagens/005_Costa_do_Falcão.jpg" alt = "Costa do Falcão">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+						</section>
+
+						<section>
+							<h3 class = "Titulo-2"><strong>Promontório do Julgamento</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									Um promontório localizado no canto sudeste de Mondstadt, nas margens do Bosque Sussurrante. Dizem que um casal apaixonado uma vez fez um juramento aqui, o que deu origem a uma lenda comovente. É um lugar muito popular entre casais.
+								</p>
+								<p>
+									Além de poder ver o nascer e o pôr do sol, devido à sua elevação, você pode ver o lado oposto do promontório.
+								</p>
+								<img src = "../imagens/006_Promontório_do_Julgamento.jpg" alt = "Promontório do Julgamento">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+						</section>
+
+						<section>
+							<h3 class = "Titulo-2"><strong>Vinhedo do Alvorecer</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									O Vinhedo do Alvorecer está localizado no sudoeste de Mondstadt, que continua há gerações a tradição da vinificação. Os campos de uvas que se espalham por todo o lugar são utilizados para a produção de todos os tipos de vinhos que têm grande popularidade em Teyvat. Ano após ano, parte da produção dp vinho é destinada à venda em Mondstadt, e outra parte é distribuída a todos os cantos pela rota comercial ao sul da cidade.
+								</p>
+								<img src = "../imagens/007_Vinhedo_do_Alvorecer.png" alt = "Vinhedo do Alvorecer">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+						</section>
+
+						<section>
+							<h3 class = "Titulo-2"><strong>Vale Termal</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									Uma pequena vila calma ao sul de Mondstadt, em frente ao lago que circunda a cidade. A maioria dos moradores da vila são caçadores que fornecem carne fresca para todos os grandes restaurantes de Mondstadt. O Vale Termal atrai muitos viajantes graças ao seu ao seu charme rústico. Se você tiver a oportunidade de provar carne cozida por um chef experiente, poderá experimentar sensações diferentes.
+								</p>
+								<img src = "../imagens/008_Vale_Termal.jpg" alt = "Vale Termal">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+						</section>
+
+						<section>
+							<h3 class = "Titulo-2"><strong>Templo do Vento Milenar</strong></h3>
+							<div class = "Linha-1x"></div>
+
+							<div class = "texto">
+								<p>
+									Um conjunto de ruínas ao nordeste de Mondstadt. Dizem que antigamente era o lugar de adoração ao Deus do Vento, mas ao longo dos anos foi se corroendo, até hoje só restar ruínas. Em alguns pilares de pedra, ainda é possível ver gravuras requintadas de uma glória passada.
+								</p>
+								<p>Esquecido há muito tempo, há uma frase gravada na pedra:</p>
+								<p><em>"As sementes levadas pelo vento crescem ao longo do tempo."</em></p>
+								<img src = "../imagens/009_Templo_do_Vento_Milenar.jpg" alt = "Templo do Vento Milenar">
+								<div class = "espaco"></div>
+								<div class = "Linha-1x"></div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+
+		</article>
+	</main>
+
+	<!-- Bootstrap 5.3 -->
+	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+		integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin = "anonymous">
+	</script>
+
+	<!-- Meus Scritps -->
+	<script src = "../scripts/login_Dados.js"></script>
+	<script src = "../scripts/rodape.js"></script>
+</body>
+</html>

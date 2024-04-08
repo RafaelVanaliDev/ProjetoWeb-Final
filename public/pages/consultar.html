@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" conten = "width=device-width, initial-scale=1.0">
+	<title>Dados da Conta</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel = "stylesheet"
+		integrity = "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin = "anonymous">
+
+	<!--Meus CSS-->
+	<link rel = "stylesheet" href = "../css/02_background.css">
+	<link rel = "stylesheet" href = "../css/01_estilo_menu_principal.css">
+	<link rel = "stylesheet" href = "../css/04_estilo_sobre_jogos.css">
+
+</head>
+<body>
+	<section id = "estilo_menu_principal"> 
+		<!-- Barra de Navegação -->
+		<nav class = "navbar navbar-expand-lg navbar-light bg-light">
+			<div class = "container-fluid">
+				<img class = "navbar-brand" src="../imagens/010_logo.png" alt = "Logo">
+				<button 
+					class = "navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target = "#navbarNav" aria-controls = "navbarNav" aria-expanded = "false" aria-label = "Toggle navigation">
+					<span class = "navbar-toggler-icon"></span>
+				</button>
+				<div class = "collapse navbar-collapse" id = "navbarNav">
+					<ul class = "navbar-nav border border-dark">
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "../index.html">Inicio</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "Sobre.html">O Jogo</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Personagens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#">Itens</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "consultar.html">Conta</a>
+						</li>
+						<li class = "nav-item">
+							<a class = "nav-link border border-dark" href = "#" id="entrarLink">Entrar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section class = "jan_login"> 
+		<!-- ENTRAR ( Login e ou Cadastrar )-->
+		<div class = "modal fade" id = "loginModal" tabindex = "-1" aria-labelledby = "exampleModalLabel" aria-hidden = "true">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<h5 class = "modal-title" id = "exampleModalLabel"><img src = "./imagens/010_logo.png" alt = "Logo" class = "ajuste-imagem"></h5>
+						<button type = "button" class = "btn-close" data-bs-dismiss = "modal" aria-label = "Close"></button>
+					</div>
+					<div class = "modal-body">
+						<div class = "mb-3">
+							<label for = "username" class = "form-label">Nome do Usuário</label>
+							<input type = "text" class = "form-control" id = "username">
+						</div>
+						<div class = "mb-3">
+							<label for = "password" class = "form-label">Senha</label>
+							<input type = "password" class = "form-control" id = "password">
+						</div>
+						<p><a href = "#">Esqueceu a senha?</a></p>
+						<p><a href = "../Criar_Conta.html">Criar conta</a></p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-secondary" data-bs-dismiss = "modal">Fechar</button>
+						<button type = "button" class = "btn btn-primary">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container mt-5">
+		<h1 class = "mb-4">Sua Conta!</h1>
+
+		<!-- Visualizar Cadastro -->
+		<section id = "visualizarCadastro">
+			<h2>Visualizar Cadastro</h2>
+			<form id = "searchForm">
+				<div class = "form-group">
+					<label for = "cadastroId">ID do Cadastro:</label>
+					<input type = "text" class = "form-control" id = "cadastroId" name = "cadastroId">
+				</div>
+				<button type = "submit" class = "btn btn-primary">Buscar</button>
+			</form>
+			<div id = "cadastroInfo" class = "mt-3"></div>
+		</section>
+
+		<!-- Deletar Cadastro -->
+		<section id = "deletarCadastro" class = "mt-5">
+			<h2>Deletar Cadastro</h2>
+			<form id = "deleteForm">
+				<div class = "form-group">
+					<label for = "cadastroIdDeletar">ID do Cadastro:</label>
+					<input type = "text" class = "form-control" id = "cadastroIdDeletar" name = "cadastroIdDeletar">
+				</div>
+				<button type = "submit" class = "btn btn-danger">Deletar</button>
+			</form>
+			<div id = "deleteMessage" class = "mt-3"></div>
+		</section>
+
+		<!-- Atualizar Cadastro -->
+		<section id = "atualizarCadastro" class = "mt-5">
+			<h2>Atualizar Cadastro</h2>
+			<form id = "updateForm">
+				<div class="form-group">
+					<label for = "cadastroIdUpdate">ID do Cadastro:</label>
+					<input type = "text" class = "form-control" id = "cadastroIdUpdate" name = "cadastroIdUpdate" required>
+				</div>
+				<div class="form-group">
+					<label for = "novoPrimeiroNome">Novo Primeiro Nome:</label>
+					<input type = "text" class = "form-control" id = "novoPrimeiroNome" name = "novoPrimeiroNome">
+				</div>
+				<div class="form-group">
+					<label for = "novoSobrenome">Novo Sobrenome:</label>
+					<input type = "text" class = "form-control" id = "novoSobrenome" name = "novoSobrenome">
+				</div>
+				<div class="form-group">
+					<label for = "novoNomeUsuario">Novo Nome de Usuário:</label>
+					<input type = "text" class = "form-control" id = "novoNomeUsuario" name = "novoNomeUsuario">
+				</div>
+				<div class="form-group">
+					<label for = "novoCPF">Novo CPF:</label>
+					<input type = "text" class = "form-control" id = "novoCPF" name = "novoCPF">
+				</div>
+				<div class="form-group">
+					<label for = "novoEstado">Novo Estado:</label>
+					<input type = "text" class = "form-control" id = "novoEstado" name = "novoEstado">
+				</div>
+				<div class = "form-group">
+					<label for = "novoSexo">Novo Sexo:</label>
+					<select class = "form-control" id = "novoSexo" name = "novoSexo">
+						<option value = "masculino">Masculino</option>
+						<option value = "feminino">Feminino</option>
+						<option value = "outro">Outro</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for = "novoCelular">Novo Celular:</label>
+					<input type = "text" class = "form-control" id = "novoCelular" name = "novoCelular">
+				</div>
+				<div class="form-group">
+					<label for = "novoEmail">Novo Email:</label>
+					<input type = "email" class = "form-control" id = "novoEmail" name = "novoEmail">
+				</div>
+				<div class = "form-group">
+					<label for = "novaSenha">Nova Senha:</label>
+					<input type = "password" class = "form-control" id = "novaSenha" name = "novaSenha">
+				</div>
+				<button type = "submit" class="btn btn-success mb-5">Atualizar Cadastro</button>
+			</form>
+			<p id = "updateMessage" class = "mt-3"></p>
+		</section>
+	</div>
+	<script src = "https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+		integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin = "anonymous">
+	</script>
+
+	<!-- Meus Scritps -->
+	<script src = "../scripts/login_Dados.js"></script>
+	<script src = "../scripts/rodape.js"></script>
+
+	<script src = "../scripts/conta_Consultar.js"></script>
+	<script src = "../scripts/conta_Atualizar.js"></script>
+	<script src = "../scripts/conta_Deletar.js"></script>
+</body>
+</html>

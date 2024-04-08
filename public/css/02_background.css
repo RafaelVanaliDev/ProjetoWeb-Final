@@ -1,0 +1,18 @@
+.jan_login
+{
+	color: #000000;
+	
+}
+
+/* centralizar a Janela de Login na Tela, especialmente em Y*/
+.modal-dialog
+{
+	position: center;
+	top: 25%;
+	transform: translateY(-50%);
+}
+
+.ajuste-imagem
+{
+	margin-left: 80px;
+}

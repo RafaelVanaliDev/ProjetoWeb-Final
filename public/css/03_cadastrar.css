@@ -1,0 +1,56 @@
+.mensagem-erro
+{
+	color: red;
+	font-size: 0.875rem;
+}
+
+.mensagem-sucesso
+{
+	color: green;
+	font-size: 0.875rem;
+}
+
+/* no prmpt de cadastro realizado */
+.mensagem-cadastro-feito
+{
+	color: rgb(90, 164, 201);
+	text-align: center;
+	margin: auto;
+}
+
+.mensagem-texto
+{
+	color: green;
+	font-size: 17px;
+}
+
+@media screen and (max-width: 1024px)
+{
+	.row
+	{
+		flex-direction: column !important;
+	}
+
+	.col
+	{
+		width: 100% !important;
+		margin-bottom: 1rem;
+	}
+}
+
+/* Para Centralizar o prompt de cadastro (feito) centralizar o botão de voltar */
+#cadastroModal .modal-footer
+{
+	justify-content: center;
+}
+
+.cor-usuario
+{
+	color:blueviolet;
+}
+
+/* largura para os campos */
+.input-largura
+{
+	width: 500px;
+}
